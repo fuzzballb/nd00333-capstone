@@ -38,7 +38,7 @@ def init():
     global model
     # This name is model.id of model that we want to deploy deserialize the model file back
     # into a sklearn model
-    model_path = "outputs/automl_test_experiment_best_model.pkl"
+    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'automl_test_experiment_best_model2.pkl')
     print(model_path)
     path = os.path.normpath(model_path)
     path_split = path.split(os.sep)

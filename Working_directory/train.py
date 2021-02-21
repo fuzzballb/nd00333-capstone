@@ -15,8 +15,7 @@ from azureml.core import Workspace, Datastore, Dataset
 
 def clean_data(data):
     # Clean and one hot encode data
-    # x_df = data.to_pandas_dataframe().dropna()
-    # x_df = data.to_pandas_dataframe().dropna()
+    x_df = data.to_pandas_dataframe().dropna()
     # Geographies = pd.get_dummies(x_df.Geography, prefix="Geography")
     # x_df.drop("Geography", inplace=True, axis=1)
     # x_df = x_df.join(Geographies)
@@ -56,6 +55,9 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+
+    os.makedirs('outputs', exist_ok=True)
+    joblib.dump(model, 'outputs/project_model.joblib')
 
 if __name__ == '__main__':
     main()
