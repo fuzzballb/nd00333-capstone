@@ -69,9 +69,9 @@ Maximum amount of iterations: 100
 
 For the Hyperparameter tuning, running tests with the other two available strategies (Grid sampling or Bayesian sampling) might also produce more optimal hyperparameters
 
-![best model]https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Best%20model.PNG?raw=true "best model")
+![best model](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Best%20model.PNG?raw=true "best model")
 
-![widget]https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Rundetails.PNG?raw=true "widget")
+![widget](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Rundetails.PNG?raw=true "widget")
 
 
 ## Model Deployment
