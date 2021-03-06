@@ -36,19 +36,21 @@ For the training it is specified that an experiment should time-out if it takes 
 
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
-
-the results of the different modals used by automated ML are the following. In this case the MaxAbsScaler RandomForest gives the best results. 
+the results of the different modals used by automated ML are the following. In this case the VotingEnsemble gives the highest accuracy (0.8657). 
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 <screenshot>
          
 The data provided was balanced, didn't contain missing values and didn't have high cardinality features 
-         
+
+The hyper parameters that where used in this training run where
+iterations: 10,
+primary_metric:  'accuracy'                     
+n_cross_validations: 5
+
+These results can be improved by adding more itterations and cross validations to the AutoML method. 
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-
 The modal that was used to determain if a client would leave the bank, is a LogisticRegression. With Logistic regression the outcome is ether true or false. In our case this is exectly what we are trying to predict.
 
 The strategy used for finding the optimal hyper parameters is RandomParameterSampling. 
@@ -59,32 +61,26 @@ the other paremeter is the maximum number of iterations to converge. Here we spe
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-
 The best Accuracy for the Hyperparameter tuning was: 0.812, using the folowing parameters
 
 Inverse of regularization strength: 3.5888602469365685
 Maximum amount of iterations: 100
 
-The best Accuracy gaind with autoML was 0.8384, using RandomForest with a MaxAbsScaler. 
-
-iterations: 10,
-primary_metric:  'accuracy'                     
-n_cross_validations: 5
-
+For the Hyperparameter tuning, running tests with the other two available strategies (Grid sampling or Bayesian sampling) might also produce more optimal hyperparameters
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
-
 First the best modal is saved as a static file (pkl). Then a new anaconda environment with a AciWebservice is created that runs score.py and has the pip packages specified in conda_env_v_1_0_0.yml. The score.py uses the saved modal to do the predictions. The data that can be sent to this webservice needs to be formatted to the JSON standaard, and the result will return as JSON as well
 
+*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
+
+
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+See the following link (https://www.youtube.com/watch?v=LenZ2_Ed71k) for a screen recording containing 
+
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
