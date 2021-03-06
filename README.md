@@ -38,9 +38,10 @@ For the training it is specified that an experiment should time-out if it takes 
 ### Results
 the results of the different modals used by automated ML are the following. In this case the VotingEnsemble gives the highest accuracy (0.8657). 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-<screenshot>
-         
+![best model](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/AutoML/Best%20modal.PNG?raw=true "best model")
+
+![widget](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/AutoML/Widget.PNG?raw=true "widget")
+
 The data provided was balanced, didn't contain missing values and didn't have high cardinality features 
 
 The hyper parameters that where used in this training run where
@@ -68,7 +69,10 @@ Maximum amount of iterations: 100
 
 For the Hyperparameter tuning, running tests with the other two available strategies (Grid sampling or Bayesian sampling) might also produce more optimal hyperparameters
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![best model]https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Best%20model.PNG?raw=true "best model")
+
+![widget]https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Rundetails.PNG?raw=true "widget")
+
 
 ## Model Deployment
 First the best modal is saved as a static file (pkl). Then a new anaconda environment with a AciWebservice is created that runs score.py and has the pip packages specified in conda_env_v_1_0_0.yml. The score.py uses the saved modal to do the predictions. The data that can be sent to this webservice needs to be formatted to the JSON standaard, and the result will return as JSON as well
