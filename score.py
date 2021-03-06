@@ -29,7 +29,6 @@ input_sample = pd.DataFrame(
         "Geography_France": pd.Series([0.0], dtype="float64"), 
         "Geography_Germany": pd.Series([0.0], dtype="float64"), 
         "Geography_Spain": pd.Series([0.0], dtype="float64"), 
-        "time": pd.Series([0.0], dtype="float64")
     }
 )
 output_sample = np.array([0])
