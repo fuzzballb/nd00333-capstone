@@ -77,9 +77,47 @@ For the Hyperparameter tuning, running tests with the other two available strate
 ## Model Deployment
 First the best modal is saved as a static file (pkl). Then a new anaconda environment with a AciWebservice is created that runs score.py and has the pip packages specified in conda_env_v_1_0_0.yml. The score.py uses the saved modal to do the predictions. The data that can be sent to this webservice needs to be formatted to the JSON standaard, and the result will return as JSON as well
 
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+Since the published endpoint abites to the REST API standard, a HTML post with the following JSON body needs to be sent to get the predictions. In this case we are requesting two predictions.
 
+        URL : http://57ea7fd1-a3c6-4513-b540-ea076b3a1780.southcentralus.azurecontainer.io/score
 
+        PAYLOAD (body) : 
+        {"data":
+                [
+                  {
+                        "CreditScore": 	502,
+                        "Gender": 1,	
+                        "Age": 42,	
+                        "Tenure": 8,	
+                        "Balance": 159660.8,	
+                        "NumOfProducts":	3,
+                        "HasCrCard":	1,
+                        "IsActiveMember": 0,	
+                        "EstimatedSalary": 113931.57,	
+                        "Geography_France": 1,	
+                        "Geography_Germany": 0,	
+                        "Geography_Spain": 0
+                  },
+                  {
+                        "CreditScore": 	543,
+                        "Gender": 0,	
+                        "Age": 22,	
+                        "Tenure": 8,	
+                        "Balance": 0,	
+                        "NumOfProducts":	2,
+                        "HasCrCard":	0,
+                        "IsActiveMember": 0,	
+                        "EstimatedSalary": 127587.22,	
+                        "Geography_France": 1,	
+                        "Geography_Germany": 0,	
+                        "Geography_Spain": 0
+                  }
+          ]
+        }
+
+To authenticate with this endpoint, there needs to be a bearer token added to the header of the post. This token can be found in the endpoint details in Azure ML studio.
+
+        HEADER : "Authorization" : "Bearer <your token>"
 
 ## Screen Recording
 See the following link (https://www.youtube.com/watch?v=LenZ2_Ed71k) for a screen recording containing 
