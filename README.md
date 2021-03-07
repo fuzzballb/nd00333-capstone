@@ -9,9 +9,13 @@ This project required the student to find a custom dataset to use. So this speci
 
 ### Table of contents
 [Dataset](#Dataset)
+
 [Automated ML](#Automated-ML)
+
 [Hyperparameter Tuning](#Hyperparameter-Tuning)
+
 [Model Deployment](#Model-Deployment)
+
 [Screen Recording](#Screen-Recording)
 
 ## Dataset
