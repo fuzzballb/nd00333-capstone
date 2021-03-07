@@ -144,7 +144,8 @@ The hyper parameters that where used in this training run where
 ```
 
 #### How to improve the model
-These results can be improved by adding more itterations and cross validations to the AutoML method. 
+These results can be improved by adding more iterations and cross validations to the AutoML method. When training a model on a fixed amount of data, it will adapt to the data it is been trained on. This gives high accuracy, but doesn't generalize very well. This means that on data outside of the training data the accuracy might not be that high. To mitigate this overfitting on test data, having more cross validations will improve the performance.
+
 
 ## Hyperparameter Tuning
 
@@ -166,11 +167,13 @@ The best Accuracy for the Hyperparameter tuning was: 0.812, using the folowing p
 Inverse of regularization strength: 3.5888602469365685
 Maximum amount of iterations: 100
 
-For the Hyperparameter tuning, running tests with the other two available strategies (Grid sampling or Bayesian sampling) might also produce more optimal hyperparameters
-
 ![best model](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Best%20model.PNG?raw=true "best model")
 
 ![widget](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/HyperParameters/Rundetails.PNG?raw=true "widget")
+
+### How to improve the project in the future
+For the Hyperparameter tuning, running tests with the other two available strategies (Grid sampling or Bayesian sampling) might produce more optimal hyperparameters. Currently Random sampling is used to find the best parameters, but as the name suggests these are random pics. Sampling the whole grid using "Grid sampling" and a lot of iterations, would probably lead to finding even better results. The downside is that this takes a lot more iterations. To mitigate this, we could also use "Bayesian sampling" which is a smarter way of finding optimal results, by searching around results that have high accuracy instead of searching on the whole search grid.
+
 
 
 ## Model Deployment
