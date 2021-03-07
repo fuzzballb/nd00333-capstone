@@ -120,7 +120,7 @@ To authenticate with this endpoint, there needs to be a bearer token added to th
         HEADER : "Authorization" : "Bearer <your token>"
 
 ## Screen Recording
-See the following link (https://www.youtube.com/watch?v=LenZ2_Ed71k) for a screen recording containing 
+See the following link (https://www.youtube.com/watch?v=wGHW-fCDeq8) for a screen recording containing [updated]
 
 - A working model
 - Demo of the deployed  model
