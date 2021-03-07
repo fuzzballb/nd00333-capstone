@@ -9,7 +9,7 @@
 ## Dataset
 This data set contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his account) or he continues to be a customer.
 
-The data provided was balanced, didn't contain missing values and didn't have high cardinality features. This is verified by by running Azure autoML see [Data quality](#Automated-ML-Data-quality)
+The data provided was balanced, didn't contain missing values and didn't have high cardinality features. This is verified by by running Azure autoML see [Data quality](#Data-quality)
 
 
 ### Overview
@@ -80,7 +80,6 @@ The the best fitted model has the following properties
         
 ![model registerd](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/AutoML/RegisterdModel.PNG?raw=true "model registerd") 
 
-(#Automated-ML-Data-quality)
 #### Data quality 
 The data provided was balanced, didn't contain missing values and didn't have high cardinality features 
 
