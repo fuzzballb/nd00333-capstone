@@ -1,13 +1,21 @@
 # Bank Churn Modeling
+This is the final project of the "Machine Learning Engineer with Microsoft Azure" form Udacity. Here we use the Azure Machine Learning API, to programmatically run two types of automated learning methods. The first and most advanced one is AutoML which checks the quality of the provided data and runs different types of machine learning models to see which one gives the best result. The second method is Hyperparameter tuning where you write your own machine learning code, which accepts hyperparameters as input. The Azure API then optimizes these parameters by sampling the search space configured by the user.
 
-<Write text about the project>
+After the model has been trained, it is deployed on an Azure webservice that takes json data as input and outputs the predicted result.
 
+While the performed actions in these notebooks can also be performed in AzureML studio, it is faster and better for reproducibility to use a Jupiter notebook to perform these tasks using code. That sayd the studio environment is still very useful for exploring data and comparing multiple experiments.
 
+This project required the student to find a custom dataset to use. So this specific project is about predicting bank churn.
 
-
+### Table of contents
+[Dataset](#Dataset)
+[Automated ML](#Automated-ML)
+[Hyperparameter Tuning](#Hyperparameter-Tuning)
+[Model Deployment](#Model-Deployment)
+[Screen Recording](#Screen-Recording)
 
 ## Dataset
-This data set contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his/her account) or he/she continues to be a customer. The dataset contains 10.000 records 
+This data set contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his/her account) or he/she continues to be a customer. The dataset contains 10.000 records and the label that specifies if a customer is churned is "Exited"
 
 The data provided was balanced, didn't contain missing values and didn't have high cardinality features. This is verified by by running Azure autoML see [Data quality](#Data-quality)
 
