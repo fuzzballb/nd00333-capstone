@@ -7,7 +7,7 @@
 
 
 ## Dataset
-This data set contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his account) or he continues to be a customer.
+This data set contains details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his/her account) or he/she continues to be a customer. The dataset contains 10.000 records 
 
 The data provided was balanced, didn't contain missing values and didn't have high cardinality features. This is verified by by running Azure autoML see [Data quality](#Data-quality)
 
@@ -40,6 +40,19 @@ Since the data had to come from an external source, and Keggle doesn't support d
 
 ```
         example_data = 'https://raw.githubusercontent.com/fuzzballb/nd00333-capstone/master/starter_file/cleaned_data.csv'
+```
+
+The dataset is registerd to the workspace by using the register method on the Tabular dataset object. The workspace attributes tells the method where to register the data and de key and description are also passed to be able to identify the dataset.
+
+```
+        key = "Bank-churn"
+        description_text = "Bank churn DataSet for Udacity Course"
+        ...
+        dataset = Dataset.Tabular.from_delimited_files(example_data)        
+        #Register Dataset in Workspace
+        dataset = dataset.register(workspace=ws,
+                                   name=key,
+                                   description=description_text)
 ```
 
 ## Automated ML
