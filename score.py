@@ -21,6 +21,7 @@ input_sample = pd.DataFrame(
         "CreditScore": pd.Series([0.0], dtype="float64"), 
         "Gender": pd.Series([0.0], dtype="float64"), 
         "Age": pd.Series([0.0], dtype="float64"), 
+        "Tenure": pd.Series([0.0], dtype="float64"), 
         "Balance": pd.Series([0.0], dtype="float64"), 
         "NumOfProducts": pd.Series([0.0], dtype="float64"), 
         "HasCrCard": pd.Series([0.0], dtype="float64"), 
