@@ -100,6 +100,8 @@ The the best fitted model has the following properties
         ...
         weights=[0.2, 0.3, 0.2, 0.1, 0.1, 0.1]
 ```        
+
+![best run id](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/AutoML/Best%20run%20id.PNG?raw=true "best run id")
         
 ![registering model](https://github.com/fuzzballb/nd00333-capstone/blob/master/Screenshots/AutoML/Best%20model%20register.PNG?raw=true "registering model")        
         
